@@ -25,5 +25,5 @@
 1. **Клонируйте репозиторий**
 
    ```bash
-   git clone https://github.com/yourusername/habit-tracker-api.git
+   git clone https://github.com/Qiaxx/drf_kyrsovaya_7.git
    cd habit-tracker-api
