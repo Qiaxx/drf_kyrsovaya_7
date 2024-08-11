@@ -25,6 +25,7 @@ eventlet = "^0.36.1"
 djangorestframework-simplejwt = "^5.3.1"
 setuptools = "^72.1.0"
 django-cors-headers = "^4.4.0"
+coverage = "^7.6.1"
 
 
 [build-system]

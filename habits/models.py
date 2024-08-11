@@ -79,7 +79,7 @@ class Habit(models.Model):
             )
 
         # Проверка на соответствие периодичности выполнения (для создания тестовых моделей)
-        # validate_habit_frequency(self.periodicity)
+        validate_habit_frequency(self.periodicity)
 
         # Проверка на соответствие частоте выполнения
         validate_habit_execution_frequency(self.periodicity)

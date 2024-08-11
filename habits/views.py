@@ -15,6 +15,10 @@ class UserHabit(ListAPIView):
     permission_classes = [IsAuthenticated, IsOwner]
     pagination_class = HabitPagination
 
+    def get_queryset(self):
+        # Возвращаем только привычки, принадлежащие текущему пользователю
+        return Habit.objects.filter(user=self.request.user)
+
 
 class PublicHabitViewSet(ReadOnlyModelViewSet):
     queryset = Habit.objects.filter(is_publish=True)
@@ -22,15 +26,6 @@ class PublicHabitViewSet(ReadOnlyModelViewSet):
     permission_classes = [
         IsAuthenticatedOrReadOnly,
     ]
-
-    def get_permissions(self):
-        if self.action in ["list", "retrieve"]:
-            return [
-                AllowAny,
-            ]
-        return [
-            IsAuthenticatedOrReadOnly,
-        ]
 
 
 class HabitCreate(CreateAPIView):
