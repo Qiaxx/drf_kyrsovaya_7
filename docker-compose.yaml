@@ -51,20 +51,5 @@ services:
     env_file:
       - .env
 
-  celery-beat:
-    build: .
-    tty: true
-    command: python -m celery -A config beat -l info
-    restart: on-failure
-    volumes:
-      - .:/app
-    depends_on:
-      - redis
-      - db
-      - web
-    env_file:
-      - .env
-
-
 volumes:
   pg_data:
