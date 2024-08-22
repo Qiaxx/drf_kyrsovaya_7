@@ -15,7 +15,7 @@
 ### Требования
 
 - Python 3.8 или новее
-- Django 4.0 или новее
+- Django 5.0 или новее
 - Django REST framework
 - Django REST framework JWT
 - Другие зависимости указаны в `pyproject.toml`
@@ -26,4 +26,4 @@
 
    ```bash
    git clone https://github.com/Qiaxx/drf_kyrsovaya_7.git
-   cd habit-tracker-api
+   cd drf_kyrsovaya_7
